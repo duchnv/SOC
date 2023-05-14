@@ -17,7 +17,7 @@ Wazuh sử dụng bốn chỉ số khác nhau để lưu trữ các loại sự 
        
 - **Wazuh‑statistics (Wazuh-Thống kê):**	Lưu trữ dữ liệu liên quan đến hiệu suất Wazuh server. Nó được sử dụng bởi giao diện web để đại diện cho số liệu thống kê hiệu suất.
  
-Hình 3. Wazuh indexer
+![Wazuh indexer](/Images/wazuh-003.jpg)
 
 ## 2. Wazuh server
 
@@ -33,7 +33,7 @@ Wazuh server chạy công cụ phân tích, API Wazuh RESTful, dịch vụ đăn
    
 Sơ đồ dưới đây thể hiện kiến trúc máy chủ và các thành phần:
  
-Hình 4. Kiến trúc máy chủ wazuh
+![Kiến trúc wazuh server](/Images/wazuh-004.png)
 
 **Thành phần máy chủ**
 
@@ -80,7 +80,7 @@ Wazuh agent chạy trên Linux, Windows, macOS, Solaris, AIX và các hệ đi�
 Wazuh agent có kiến trúc mô-đun. Mỗi thành phần chịu trách nhiệm về các nhiệm vụ riêng của mình, bao gồm giám sát hệ thống tệp, đọc thông báo nhật ký, thu thập dữ liệu hàng tồn kho, quét cấu hình hệ thống và tìm kiếm phần mềm độc hại. Người dùng có thể quản lý các mô-đun tác nhân thông qua cài đặt cấu hình, điều chỉnh giải pháp cho các trường hợp sử dụng cụ thể của họ.
 Sơ đồ dưới đây thể hiện kiến trúc tác nhân và các thành phần:
  
-Hình 5. Kiến trúc Agent
+![Kiến trúc Agent](/Images/wazuh-005.png)
 
 **Agent modules (Mô-đun đại lý)**
    
