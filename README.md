@@ -8,5 +8,7 @@
 # Tài liệu tham khảo
 
 - [Wazuh Documentation](https://documentation.wazuh.com/current/index.html)
+
 - [HOCCHUDONG](https://github.com/hocchudong)
-- [Tổng quan về Log](https://news.cloud365.vn/tag/log/)
+
+- [Log Archives](https://news.cloud365.vn/tag/log/)
