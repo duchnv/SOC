@@ -1,6 +1,6 @@
 # Tổng quan về Syslog
 
-1. Giới thiệu về Syslog
+## 1. Giới thiệu về Syslog
 
 Syslog là một giao thức client/server là giao thức dùng để chuyển log và thông điệp đến máy nhận log. Máy nhận log thường được gọi là syslogd, syslog daemon hoặc syslog server. Syslog có thể gửi qua UDP hoặc TCP. Các dữ liệu được gửi dạng cleartext. Syslog dùng cổng 514.
 
@@ -10,7 +10,7 @@ Syslog ban đầu sử dụng UDP, điều này là không đảm bảo cho vi�
 
 Trong chuẩn syslog, mỗi thông báo đều được dán nhãn và được gán các mức độ nghiêm trọng khác nhau. Các loại phần mềm sau có thể sinh ra thông báo: auth, authPriv, daemon, cron, ftp, dhcp, kern, mail, syslog, user,... Với các mức độ nghiêm trọng từ cao nhất trở xuống Emergency, Alert, Critical, Error, Warning, Notice, Info, and Debug.
 
-2. Mục đích của Syslog
+## 2. Mục đích của Syslog
 
 Syslog được sử dụng như một tiêu chuẩn, chuyển tiếp và thu thập log được sử dụng trên một phiên bản Linux. Syslog xác định mức độ nghiêm trọng (severity levels) cũng như mức độ cơ sở (facility levels) giúp người dùng hiểu rõ hơn về nhật ký được sinh ra trên máy tính của họ. Log (nhật ký) có thể được phân tích và hiển thị trên các máy chủ được gọi là máy chủ Syslog.
 
@@ -25,7 +25,7 @@ Giao thức syslog có những yếu tố sau:
 - Dealing with authentication or message authenticity (xử lý xác thực hoặc xác thực thư): syslog cần một cách đáng tin cậy để đảm bảo rằng máy khách và máy chủ đang nói chuyện một cách an toàn và tin nhắn nhận được không bị thay đổi.
 
 
-3. Kiến trúc của Syslog
+## 3. Kiến trúc của Syslog
 
 ![Syslog architecture components](/Images/log-001.png)
 
@@ -45,7 +45,7 @@ Một máy Linux độc lập hoạt động như một máy chủ máy chủ sy
 
 ![Architecture 3: multiple devices, one collector, one relay](/Images/log-004.png)
 
-4. Định dạng tin nhắn Syslog
+## 4. Định dạng tin nhắn Syslog
 
 ![Syslog format explained](/Images/log-005.png)
 
@@ -57,7 +57,7 @@ Một máy Linux độc lập hoạt động như một máy chủ máy chủ sy
 
 - MSG: phần này chứa thông tin thực tế về sự kiện đã xảy ra. Nó cũng được chia thành trường TAG và trường CONTENT.
 
-  1. Cấp độ cơ sở Syslog (Syslog facility levels)
+  **4.1. Cấp độ cơ sở Syslog (Syslog facility levels)**
   
   - Một mức độ cơ sở được sử dụng để xác định chương trình hoặc một phần của hệ thống tạo ra các bản ghi.
 
@@ -71,7 +71,7 @@ Một máy Linux độc lập hoạt động như một máy chủ máy chủ sy
 
   ![Các cấp độ facility Syslog](/Images/log-006.png)
   
-  2. Mức độ cảnh báo của Syslog
+  **4.2. Mức độ cảnh báo của Syslog**
   
   - Mức độ cảnh báo của Syslog được sử dụng để mức độ nghiêm trọng của log event và chúng bao gồm từ gỡ lỗi (debug), thông báo thông tin (informational messages) đến mức khẩn cấp (emergency levels).
 
@@ -85,7 +85,7 @@ Một máy Linux độc lập hoạt động như một máy chủ máy chủ sy
 
   ![Các mức độ nghiêm trọng của syslog](/Images/log-007.png) 
   
-  3. PRI
+  **4.3. PRI**
   
   Đoạn PRI là phần đầu tiên mà bạn sẽ đọc trên một tin nhắn được định dạng syslog.
 
@@ -97,7 +97,7 @@ Một máy Linux độc lập hoạt động như một máy chủ máy chủ sy
 
   ![PRI](/Images/log-008.png)
   
-  4. Header
+  **4.4. Header**
 
   ![Header](/Images/log-009.png)
  
@@ -110,7 +110,7 @@ Một máy Linux độc lập hoạt động như một máy chủ máy chủ sy
   - HOSTNAME (đôi khi có thể được phân giải thành địa chỉ IP). Nó thường được đưa ra khi bạn nhập lệnh tên máy chủ. Nếu không tìm thấy, nó sẽ được gán cả IPv4 hoặc IPv6 của máy chủ.
 
 
-5. Sysog gửi tin nhắn hoạt động như thế nào
+## 5. Sysog gửi tin nhắn hoạt động như thế nào
 
 > Chuyển tiếp nhật ký hệ thống là gì?
 
