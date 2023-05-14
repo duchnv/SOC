@@ -1,4 +1,4 @@
-# SOC
+# SOC-Wazuh
 
 1. Wazuh
 2. Log
