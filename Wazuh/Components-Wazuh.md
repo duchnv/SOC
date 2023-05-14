@@ -21,15 +21,15 @@ Hình 3. Wazuh indexer
 
 ## 2. Wazuh server
 
-Wazuh server (Máy chủ Wazuh) phân tích dữ liệu nhận được từ các tác nhân, kích hoạt cảnh báo khi phát hiện các mối đe dọa hoặc bất thường. Nó cũng được sử dụng để quản lý cấu hình tác nhân từ xa và theo dõi trạng thái của chúng.
+Wazuh server phân tích dữ liệu nhận được từ các tác nhân, kích hoạt cảnh báo khi phát hiện các mối đe dọa hoặc bất thường. Nó cũng được sử dụng để quản lý cấu hình tác nhân từ xa và theo dõi trạng thái của chúng.
    
-Wazuh server (Máy chủ Wazuh) sử dụng các nguồn thông tin về mối đe dọa để cải thiện khả năng phát hiện của nó. Nó cũng làm phong phú dữ liệu cảnh báo bằng cách sử dụng khuôn khổ MITRE ATT &CK và các yêu cầu tuân thủ quy định như PCI DSS, GDPR, HIPAA, CIS và NIST 800-53, cung cấp ngữ cảnh hữu ích cho các phân tích bảo mật.
+Wazuh server sử dụng các nguồn thông tin về mối đe dọa để cải thiện khả năng phát hiện của nó. Nó cũng làm phong phú dữ liệu cảnh báo bằng cách sử dụng khuôn khổ MITRE ATT &CK và các yêu cầu tuân thủ quy định như PCI DSS, GDPR, HIPAA, CIS và NIST 800-53, cung cấp ngữ cảnh hữu ích cho các phân tích bảo mật.
 
-Ngoài ra, Wazuh server (Máy chủ Wazuh) có thể được tích hợp với phần mềm bên ngoài, bao gồm các hệ thống bán vé như ServiceNow, Jira và PagerDuty, cũng như các nền tảng nhắn tin tức thời như Slack. Những tích hợp này thuận tiện cho việc hợp lý hóa các hoạt động bảo mật.
+Ngoài ra, Wazuh server có thể được tích hợp với phần mềm bên ngoài, bao gồm các hệ thống bán vé như ServiceNow, Jira và PagerDuty, cũng như các nền tảng nhắn tin tức thời như Slack. Những tích hợp này thuận tiện cho việc hợp lý hóa các hoạt động bảo mật.
 
 **Kiến trúc máy chủ**
 
-Wazuh server (Máy chủ Wazuh) chạy công cụ phân tích, API Wazuh RESTful, dịch vụ đăng ký đại lý, dịch vụ kết nối tác nhân, trình nền cụm Wazuh và Filebeat. Máy chủ được cài đặt trên hệ điều hành Linux và thường chạy trên máy vật lý độc lập, máy ảo, bộ chứa docker hoặc phiên bản đám mây.
+Wazuh server chạy công cụ phân tích, API Wazuh RESTful, dịch vụ đăng ký đại lý, dịch vụ kết nối tác nhân, trình nền cụm Wazuh và Filebeat. Máy chủ được cài đặt trên hệ điều hành Linux và thường chạy trên máy vật lý độc lập, máy ảo, bộ chứa docker hoặc phiên bản đám mây.
    
 Sơ đồ dưới đây thể hiện kiến trúc máy chủ và các thành phần:
  
@@ -37,7 +37,7 @@ Hình 4. Kiến trúc máy chủ wazuh
 
 **Thành phần máy chủ**
 
-Wazuh server (Máy chủ Wazuh) bao gồm một số thành phần được liệt kê bên dưới có các chức năng khác nhau, chẳng hạn như đăng ký các đại lý mới, xác thực từng danh tính tác nhân và mã hóa thông tin liên lạc giữa (Wazuh agent tác nhân Wazuh) và Wazuh server (Máy chủ Wazuh).
+Wazuh server bao gồm một số thành phần được liệt kê bên dưới có các chức năng khác nhau, chẳng hạn như đăng ký các đại lý mới, xác thực từng danh tính tác nhân và mã hóa thông tin liên lạc giữa Wazuh agent và Wazuh server.
    
 - **Agent enrollment service (Dịch vụ đăng ký đại lý):** Nó được sử dụng để đăng ký các đại lý mới. Dịch vụ này cung cấp và phân phối các khóa xác thực duy nhất cho mỗi tác nhân. Quá trình này chạy như một dịch vụ mạng và hỗ trợ xác thực thông qua chứng chỉ TLS / SSL hoặc bằng cách cung cấp mật khẩu cố định.
     
@@ -73,11 +73,11 @@ Bảng điều khiển Wazuh bao gồm một công cụ Kiểm tra bộ quy tắ
 
 ## 4. Wazuh agent
 
-Wazuh agent (Tác nhân Wazuh) chạy trên Linux, Windows, macOS, Solaris, AIX và các hệ điều hành khác. Nó có thể được triển khai cho máy tính xách tay, máy tính để bàn, máy chủ, phiên bản đám mây, vùng chứa hoặc máy ảo. Tác nhân giúp bảo vệ hệ thống của bạn bằng cách cung cấp khả năng ngăn chặn, phát hiện và ứng phó mối đe dọa. Nó cũng được sử dụng để thu thập các loại dữ liệu hệ thống và ứng dụng khác nhau mà nó chuyển tiếp đến Wazuh server thông qua một kênh được mã hóa và xác thực.
+Wazuh agent chạy trên Linux, Windows, macOS, Solaris, AIX và các hệ điều hành khác. Nó có thể được triển khai cho máy tính xách tay, máy tính để bàn, máy chủ, phiên bản đám mây, vùng chứa hoặc máy ảo. Tác nhân giúp bảo vệ hệ thống của bạn bằng cách cung cấp khả năng ngăn chặn, phát hiện và ứng phó mối đe dọa. Nó cũng được sử dụng để thu thập các loại dữ liệu hệ thống và ứng dụng khác nhau mà nó chuyển tiếp đến Wazuh server thông qua một kênh được mã hóa và xác thực.
    
 **Agent architecture (Kiến trúc agent)**
    
-Wazuh agent (Tác nhân Wazuh) có kiến trúc mô-đun. Mỗi thành phần chịu trách nhiệm về các nhiệm vụ riêng của mình, bao gồm giám sát hệ thống tệp, đọc thông báo nhật ký, thu thập dữ liệu hàng tồn kho, quét cấu hình hệ thống và tìm kiếm phần mềm độc hại. Người dùng có thể quản lý các mô-đun tác nhân thông qua cài đặt cấu hình, điều chỉnh giải pháp cho các trường hợp sử dụng cụ thể của họ.
+Wazuh agent có kiến trúc mô-đun. Mỗi thành phần chịu trách nhiệm về các nhiệm vụ riêng của mình, bao gồm giám sát hệ thống tệp, đọc thông báo nhật ký, thu thập dữ liệu hàng tồn kho, quét cấu hình hệ thống và tìm kiếm phần mềm độc hại. Người dùng có thể quản lý các mô-đun tác nhân thông qua cài đặt cấu hình, điều chỉnh giải pháp cho các trường hợp sử dụng cụ thể của họ.
 Sơ đồ dưới đây thể hiện kiến trúc tác nhân và các thành phần:
  
 Hình 5. Kiến trúc Agent
