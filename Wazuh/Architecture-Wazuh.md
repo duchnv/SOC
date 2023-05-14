@@ -9,7 +9,7 @@ Wazuh indexer cluster (Cụm chỉ mục Wazuh) là một tập hợp gồm mộ
 Sơ đồ dưới đây thể hiện kiến trúc triển khai Wazuh. 
 Nó cho thấy các thành phần giải pháp và cách Wazuh server và các nút lập Wazuh indexer có thể được cấu hình thành các cụm, cung cấp cân bằng tải và tính sẵn sàng cao.
  
-Hình 6. Kiến trúc triển khai
+![Kiến trúc triển khai](/Images/wazuh-006.png)
 
 **Wazuh agent - Wazuh server communication**
 
