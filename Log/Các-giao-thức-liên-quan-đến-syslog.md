@@ -8,13 +8,13 @@ TCP hoạt động theo hướng kết nối (connection-oriented), trước khi
 
 **UDP là viết tắt của User Datagram Protocol** - một gói tương tự như một gói của thông tin.
 
-UDP hoạt động theo hướng không kết nối (connectionless), không yêu cầu thiết lập kết nối giữa 2 máy gửi và nhận, ko có sự đảm bảo gói tin khi truyền đi cũng như không thông báo về việc mất gói tin, ko kiểm tra lỗi của gói tin --> truyền dữ liệu nhanh hơn UDP do cơ chế hoạt động có phần đơn giản hơn tuy nhiên lại ko đáng tin cậy bằng TCP
+UDP hoạt động theo hướng không kết nối (connectionless), không yêu cầu thiết lập kết nối giữa 2 máy gửi và nhận, ko có sự đảm bảo gói tin khi truyền đi cũng như không thông báo về việc mất gói tin, ko kiểm tra lỗi của gói tin --> truyền dữ liệu nhanh hơn UDP do cơ chế hoạt động có phần đơn giản hơn tuy nhiên lại ko đáng tin cậy bằng TCP.
 
 Do đặc điểm của mình, UDP vẫn thường được sử dụng trong các ứng dụng mà đòi hỏi về tốc độ mà ít cần phải sửa lỗi. Ví dụ, UDP thường được sử dụng cho chương trình phát sóng trực tiếp và trò chơi trực tuyến.
 
 > Ví dụ:
 > - TCP: Người đưa thư phải đảm bảo thư có chữ ký của người gửi và đúng địa chỉ đó với người nhận là duy nhất để gửi thư đúng.
-> - UDP: Người đưa thư nhận thư, vứt vào hòm thư, tuy nhiên thư này gửi cho người chồng mà người vợ lại thấy ghi địa chỉ nhà mình nên cũng có thể mở ra đọc được
+> - UDP: Người đưa thư nhận thư, vứt vào hòm thư, tuy nhiên thư này gửi cho người chồng mà người vợ lại thấy ghi địa chỉ nhà mình nên cũng có thể mở ra đọc được.
 
 ## 2. SSL/TLS
 
@@ -39,8 +39,8 @@ Công nghệ SSl bảo vệ những giao dịch trực tuyến và năng cao m�
 
 Vậy ứng dụng của các giao thức này vào syslog thế nào:
 
-- UDP đảm bảo việc truyền nhận log từ client tới server, có thể sử dụng trong mạng tin cậy đòi hỏi tốc độ cao
+- UDP đảm bảo việc truyền nhận log từ client tới server, có thể sử dụng trong mạng tin cậy đòi hỏi tốc độ cao.
 
 - TCP đảm bảo độ tin cậy gói tin log truyền nhận từ client tớ server từ xa, đảm bảo không bị mất mát dữ liệu và nhận đúng dữ liệu từ máy client.
 
-- SSL/TLS: Vì Syslog là một giao thức gửi cleartext. Điều đó có nghĩa là nó có thể bị sniff "chặn bắt" trên đường truyền. Do đó SSL/TLS mã hóa đường truyền tin giữa client và server để giữ cho nội dung log gửi được an toàn
+- SSL/TLS: Vì Syslog là một giao thức gửi cleartext. Điều đó có nghĩa là nó có thể bị sniff "chặn bắt" trên đường truyền. Do đó SSL/TLS mã hóa đường truyền tin giữa client và server để giữ cho nội dung log gửi được an toàn.
