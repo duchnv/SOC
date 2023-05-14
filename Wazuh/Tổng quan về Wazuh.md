@@ -3,6 +3,7 @@ Giải pháp Wazuh bao gồm các tác nhân bảo mật, được triển khai 
 Sơ đồ dưới đây minh họa kiến trúc của môi trường phòng thí nghiệm Wazuh được yêu cầu để kiểm tra các trường hợp sử dụng được mô tả trong tài liệu này.
 
 Hình 1. Kiến trúc môi trường phòng thí nghiệm Wazuh
+
 Nền tảng Wazuh cung cấp các tính năng XDR và SIEM để bảo vệ khối lượng công việc đám mây, vùng chứa và máy chủ của bạn. Chúng bao gồm phân tích dữ liệu nhật ký, xâm nhập và phát hiện phần mềm độc hại, giám sát tính toàn vẹn của tệp, đánh giá cấu hình, phát hiện lỗ hổng và hỗ trợ tuân thủ quy định.
 Giải pháp Wazuh dựa trên tác nhân Wazuh, được triển khai trên các điểm cuối được giám sát và trên ba thành phần trung tâm: Wazuh server, Wazuh indexer và Wazuh dashboard.
 •	Wazuh indexer là một công cụ phân tích và tìm kiếm toàn văn bản, có khả năng mở rộng cao. Thành phần trung tâm này lập chỉ mục và lưu trữ các cảnh báo được tạo bởi máy chủ Wazuh.
