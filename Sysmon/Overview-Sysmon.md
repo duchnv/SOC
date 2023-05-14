@@ -42,3 +42,25 @@ Một số khả năng của Sysmon:
 
 ![sysmon-003](/Images/sysmon-003.png)
 
+# 4. Ưu và nhược điểm của Sysmon
+
+**Ưu điểm**
+
+- Dễ dàng tích hợp trên nền tảng Windows.
+
+- Cho phép ghi lại logs chứa mã băm của tiến trình được thực thi.
+
+- Cung cấp miễn phí bởi Microsoft.
+
+- Có khả năng hỗ trợ phát hiện mã độc mà các logs mặc định không làm được.
+
+-Ghi lại logs liên quan đến các tiến trình nạp driver, DLL, thay đổi khóa registry, …
+
+- Ghi lại logs liên quan đến các kết nối mạng.
+
+**Nhược điểm**
+
+- Khả năng gây nhiễu, sinh nhiều logs nên cần lọc, theo dõi và tối ưu trong quá trình triển khai giám sát.
+
+-Kẻ tấn công có thể dễ dàng vô hiệu hóa, vượt qua hoặc phá hoại dịch vụ Sysmon nên cần giám sát sự thay đổi cấu hình dịch vụ
+
