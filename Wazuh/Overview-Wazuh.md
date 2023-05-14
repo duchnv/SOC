@@ -2,7 +2,7 @@
 
 Sơ đồ dưới đây minh họa kiến trúc của môi trường phòng thí nghiệm Wazuh được yêu cầu để kiểm tra các trường hợp sử dụng được mô tả trong tài liệu này.
 
-Hình 1. Kiến trúc môi trường phòng thí nghiệm Wazuh
+![Kiến trúc môi trường phòng thí nghiệm Wazuh](/Images/wazuh-001.png)
 
 Nền tảng Wazuh cung cấp các tính năng XDR và SIEM để bảo vệ khối lượng công việc đám mây, vùng chứa và máy chủ của bạn. Chúng bao gồm phân tích dữ liệu nhật ký, xâm nhập và phát hiện phần mềm độc hại, giám sát tính toàn vẹn của tệp, đánh giá cấu hình, phát hiện lỗ hổng và hỗ trợ tuân thủ quy định.
 
@@ -21,5 +21,5 @@ Ngoài khả năng giám sát dựa trên tác nhân, nền tảng Wazuh có th�
 > Ví dụ: dữ liệu nhật ký hệ thống có thể được thu thập thông qua Syslog và cấu hình của nó có thể được theo dõi thông qua thăm dò định kỳ dữ liệu của nó, thông qua SSH hoặc thông qua API.
 
 Sơ đồ dưới đây thể hiện các thành phần và luồng dữ liệu của Wazuh.
- 
-Hình 2. Các thành phần và luồng dữ liệu của Wazuh
+
+![Các thành phần và luồng dữ liệu của Wazuh](/Images/wazuh-002.png)
